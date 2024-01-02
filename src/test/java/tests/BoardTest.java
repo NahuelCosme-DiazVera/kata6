@@ -23,11 +23,25 @@ public class BoardTest {
         assertThat(winner).isEqualTo("O");
     }
 
+    @Test
+    public void should_return_winner_given_board_3x3_vertical_line() {
+        Board board = new Board(board_3x3_vertical_line);
+        board.checkWinner();
+        String winner = board.winner();
+        assertThat(winner).isEqualTo("O");
+    }
+
     public static class Cases {
         public static String board_3x3_horizontal_line = """
                 O.X
                 OOO
                 .XX
+                """.trim();
+
+        public static String board_3x3_vertical_line = """
+                X.O
+                .XO
+                OXO
                 """.trim();
     }
 

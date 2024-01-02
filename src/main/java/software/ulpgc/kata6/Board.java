@@ -21,11 +21,25 @@ public class Board {
             this.winner = "";
             return;
         }
-        horizontalLineWinner();
+        if(horizontalLineWinner())return;
+        if (verticalLineWinner())return;
 
     }
 
-    private void horizontalLineWinner() {
+    private boolean verticalLineWinner() {
+        boolean settedWinner = false;
+        for (int i = 0; i < this.state.length; i++) {
+            char mark = state[0].charAt(i);
+            if (state[1].charAt(i) == mark && state[2].charAt(i) == mark) {
+                this.winner = String.valueOf(mark);
+                settedWinner = true;
+                break;
+            }
+        }
+        return settedWinner;
+    }
+
+    private boolean horizontalLineWinner() {
         boolean settedWinner = false;
         for (String s : state) {
             char mark = s.charAt(0);
@@ -35,5 +49,6 @@ public class Board {
                 break;
             }
         }
+        return settedWinner;
     }
 }
