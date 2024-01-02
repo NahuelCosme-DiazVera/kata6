@@ -31,6 +31,14 @@ public class BoardTest {
         assertThat(winner).isEqualTo("O");
     }
 
+    @Test
+    public void should_return_winner_given_board_3x3_descending_diagonal_line() {
+        Board board = new Board(board_3x3_descending_diagonal_line);
+        board.checkWinner();
+        String winner = board.winner();
+        assertThat(winner).isEqualTo("X");
+    }
+
     public static class Cases {
         public static String board_3x3_horizontal_line = """
                 O.X
@@ -42,6 +50,12 @@ public class BoardTest {
                 X.O
                 .XO
                 OXO
+                """.trim();
+
+        public static String board_3x3_descending_diagonal_line = """
+                XOO
+                OXO
+                OOX
                 """.trim();
     }
 

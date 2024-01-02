@@ -23,7 +23,17 @@ public class Board {
         }
         if(horizontalLineWinner())return;
         if (verticalLineWinner())return;
+        if (descendingDiagonalWinner())return;
+    }
 
+    private boolean descendingDiagonalWinner() {
+        boolean settedWinner = false;
+        char mark = state[0].charAt(0);
+        if (state[1].charAt(1) == mark && state[2].charAt(2) == mark) {
+            this.winner = String.valueOf(mark);
+            settedWinner = true;
+        }
+        return settedWinner;
     }
 
     private boolean verticalLineWinner() {

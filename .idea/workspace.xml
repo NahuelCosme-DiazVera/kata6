@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f5f04c-1367-4368-adc1-89ec1ff4f5be" name="Changes" comment="Horizontal line winning implemented">
+    <list default="true" id="00f5f04c-1367-4368-adc1-89ec1ff4f5be" name="Changes" comment="Vertical line winning implemented">
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata6/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata6/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTest.java" afterDir="false" />
     </list>
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704220528294</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Vertical line winning implemented">
+      <created>1704220975161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704220975161</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Empty board implemented" />
     <MESSAGE value="Horizontal line winning implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Horizontal line winning implemented" />
+    <MESSAGE value="Vertical line winning implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vertical line winning implemented" />
   </component>
 </project>
