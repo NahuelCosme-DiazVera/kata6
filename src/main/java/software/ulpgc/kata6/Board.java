@@ -31,9 +31,11 @@ public class Board {
     private boolean ascendingDiagonalWinner() {
         boolean settedWinner = false;
         char mark = state[2].charAt(0);
-        if (state[1].charAt(1) == mark && state[0].charAt(2) == mark) {
-            this.winner = String.valueOf(mark);
-            settedWinner = true;
+        if (mark != '.') {
+            if (state[1].charAt(1) == mark && state[0].charAt(2) == mark) {
+                this.winner = String.valueOf(mark);
+                settedWinner = true;
+            }
         }
         return settedWinner;
     }
@@ -41,9 +43,11 @@ public class Board {
     private boolean descendingDiagonalWinner() {
         boolean settedWinner = false;
         char mark = state[0].charAt(0);
-        if (state[1].charAt(1) == mark && state[2].charAt(2) == mark) {
-            this.winner = String.valueOf(mark);
-            settedWinner = true;
+        if (mark != '.') {
+            if (state[1].charAt(1) == mark && state[2].charAt(2) == mark) {
+                this.winner = String.valueOf(mark);
+                settedWinner = true;
+            }
         }
         return settedWinner;
     }
@@ -52,10 +56,12 @@ public class Board {
         boolean settedWinner = false;
         for (int i = 0; i < this.state.length; i++) {
             char mark = state[0].charAt(i);
-            if (state[1].charAt(i) == mark && state[2].charAt(i) == mark) {
-                this.winner = String.valueOf(mark);
-                settedWinner = true;
-                break;
+            if (mark != '.') {
+                if (state[1].charAt(i) == mark && state[2].charAt(i) == mark) {
+                    this.winner = String.valueOf(mark);
+                    settedWinner = true;
+                    break;
+                }
             }
         }
         return settedWinner;
@@ -65,10 +71,12 @@ public class Board {
         boolean settedWinner = false;
         for (String s : state) {
             char mark = s.charAt(0);
-            if (s.charAt(1) == mark && s.charAt(2) == mark) {
-                this.winner = String.valueOf(mark);
-                settedWinner = true;
-                break;
+            if (mark != '.') {
+                if (s.charAt(1) == mark && s.charAt(2) == mark) {
+                    this.winner = String.valueOf(mark);
+                    settedWinner = true;
+                    break;
+                }
             }
         }
         return settedWinner;
